@@ -62,7 +62,9 @@ namespace SuperSoft.WebAPI.Controllers.Students
 
             student.name = request.name;
             student.dateOfBirth = request.dateOfBirth;
-
+            
+            await dbContext.SaveChangesAsync();
+            
             return Ok();
         }
     }
